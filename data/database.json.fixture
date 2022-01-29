@@ -1,0 +1,390 @@
+{
+    "users":[
+        {
+            "id": 1,
+            "name":"Dave Francis",
+            "email":"dave@go-mail.com"
+        },
+        {
+            "id": 2,
+            "name":"Nick Murphy",
+            "email":"nick@go-mail.com"
+        }
+    ],
+    "props":[
+        {
+            "id": 1,
+            "address": "60 Division Crossing",
+            "bedroom": 4,
+            "bath": 4,
+            "sqrFoot": 2590,
+            "petsAllowed": true,
+            "ownerName": "Maxy Surgeon",
+            "userId": 1,
+            "imgUrl": "https://i.imgur.com/cRMBLNv.png"
+          }, {
+            "id": 2,
+            "address": "6 Golden Leaf Place",
+            "bedroom": 2,
+            "bath": 2,
+            "sqrFoot": 2280,
+            "petsAllowed": true,
+            "ownerName": "Analiese Pierson",
+            "userId": 1,
+            "imgUrl": "https://i.imgur.com/bbCpoZg.png"
+          }, {
+            "id": 3,
+            "address": "4460 Parkside Court",
+            "bedroom": 2,
+            "bath": 2,
+            "sqrFoot": 2916,
+            "petsAllowed": false,
+            "ownerName": "Joshua Mastrantone",
+            "userId": 1,
+            "imgUrl": "https://i.imgur.com/IoGs1Pg.png"
+          }, {
+            "id": 4,
+            "address": "60 Gerald Way",
+            "bedroom": 4,
+            "bath": 4,
+            "sqrFoot": 2278,
+            "petsAllowed": true,
+            "ownerName": "Maryjo South",
+            "userId": 1,
+            "imgUrl": "https://i.imgur.com/FX0bXEk.png"
+          }, {
+            "id": 5,
+            "address": "3 South Trail",
+            "bedroom": 2,
+            "bath": 3,
+            "sqrFoot": 1949,
+            "petsAllowed": false,
+            "ownerName": "Arabel McNeilley",
+            "userId": 1,
+            "imgUrl": "https://i.imgur.com/zq238YE.png"
+          }, {
+            "id": 6,
+            "address": "75 Starling Trail",
+            "bedroom": 4,
+            "bath": 2,
+            "sqrFoot": 2525,
+            "petsAllowed": false,
+            "ownerName": "Darcy Yushachkov",
+            "userId": 1,
+            "imgUrl": "https://i.imgur.com/cSpgn2n.png"
+          }, {
+            "id": 7,
+            "address": "9033 Gerald Crossing",
+            "bedroom": 2,
+            "bath": 2,
+            "sqrFoot": 2613,
+            "petsAllowed": false,
+            "ownerName": "Ulrick Cromleholme",
+            "userId": 1,
+            "imgUrl": "https://i.imgur.com/S85045b.png"
+          }, {
+            "id": 8,
+            "address": "7 Londonderry Lane",
+            "bedroom": 3,
+            "bath": 4,
+            "sqrFoot": 2026,
+            "petsAllowed": true,
+            "ownerName": "Cecilla Watkins",
+            "userId": 1,
+            "imgUrl": "https://i.imgur.com/Q84JrV9.png"
+          }, {
+            "id": 9,
+            "address": "4092 Parkside Trail",
+            "bedroom": 2,
+            "bath": 2,
+            "sqrFoot": 2409,
+            "petsAllowed": false,
+            "ownerName": "Deva Kinningley",
+            "userId": 1,
+            "imgUrl": "https://i.imgur.com/jZrWOPL.png"
+          }, {
+            "id": 10,
+            "address": "17 Rusk Plaza",
+            "bedroom": 3,
+            "bath": 4,
+            "sqrFoot": 2456,
+            "petsAllowed": false,
+            "ownerName": "Bobbie Haskett",
+            "userId": 2,
+            "imgUrl": "https://i.imgur.com/QS3n2ak.png"
+          }, {
+            "id": 11,
+            "address": "77379 Cardinal Center",
+            "bedroom": 2,
+            "bath": 3,
+            "sqrFoot": 2882,
+            "petsAllowed": true,
+            "ownerName": "Stefania Schwandt",
+            "userId": 2,
+            "imgUrl": "https://i.imgur.com/bCMd1PA.png"
+          }, {
+            "id": 12,
+            "address": "9361 Del Mar Park",
+            "bedroom": 2,
+            "bath": 4,
+            "sqrFoot": 2500,
+            "petsAllowed": true,
+            "ownerName": "Atalanta Brent",
+            "userId": 2,
+            "imgUrl": "https://i.imgur.com/dAdg5Rn.png"
+          }
+    ],
+    "notes":[
+        {
+            "id": 1,
+            "message": "Pellentesque ultrices mattis odio.",
+            "propId": 7,
+            "isUrgent": false
+          }, {
+            "id": 2,
+            "message": "Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.",
+            "propId": 8,
+            "isUrgent": false
+          }, {
+            "id": 3,
+            "message": "Mauris sit amet eros.",
+            "propId": 1,
+            "isUrgent": false
+          }, {
+            "id": 4,
+            "message": "Vivamus vel nulla eget eros elementum pellentesque.",
+            "propId": 1,
+            "isUrgent": true
+          }, {
+            "id": 5,
+            "message": "Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
+            "propId": 3,
+            "isUrgent": false
+          }, {
+            "id": 6,
+            "message": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "propId": 4,
+            "isUrgent": true
+          }, {
+            "id": 7,
+            "message": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+            "propId": 10,
+            "isUrgent": true
+          }, {
+            "id": 8,
+            "message": "Etiam justo. Etiam pretium iaculis justo.",
+            "propId": 9,
+            "isUrgent": false
+          }, {
+            "id": 9,
+            "message": "Maecenas rhoncus aliquam lacus.",
+            "propId": 7,
+            "isUrgent": true
+          }, {
+            "id": 10,
+            "message": "Quisque id justo sit amet sapien dignissim vestibulum.",
+            "propId": 12,
+            "isUrgent": true
+          }, {
+            "id": 11,
+            "message": "Nulla facilisi.",
+            "propId": 10,
+            "isUrgent": true
+          }, {
+            "id": 12,
+            "message": "Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+            "propId": 1,
+            "isUrgent": false
+          }, {
+            "id": 13,
+            "message": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+            "propId": 12,
+            "isUrgent": true
+          }, {
+            "id": 14,
+            "message": "Phasellus id sapien in sapien iaculis congue.",
+            "propId": 10,
+            "isUrgent": true
+          }, {
+            "id": 15,
+            "message": "Aliquam erat volutpat.",
+            "propId": 3,
+            "isUrgent": false
+          }, {
+            "id": 16,
+            "message": "Vivamus in felis eu sapien cursus vestibulum.",
+            "propId": 11,
+            "isUrgent": true
+          }, {
+            "id": 17,
+            "message": "Morbi a ipsum.",
+            "propId": 2,
+            "isUrgent": false
+          }, {
+            "id": 18,
+            "message": "Etiam justo. Etiam pretium iaculis justo.",
+            "propId": 4,
+            "isUrgent": false
+          }, {
+            "id": 19,
+            "message": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.",
+            "propId": 5,
+            "isUrgent": false
+          }, {
+            "id": 20,
+            "message": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
+            "propId": 6,
+            "isUrgent": false
+          }, {
+            "id": 21,
+            "message": "Suspendisse potenti.",
+            "propId": 11,
+            "isUrgent": true
+          }, {
+            "id": 22,
+            "message": "Curabitur at ipsum ac tellus semper interdum.",
+            "propId": 11,
+            "isUrgent": false
+          }, {
+            "id": 23,
+            "message": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+            "propId": 7,
+            "isUrgent": true
+          }, {
+            "id": 24,
+            "message": "In eleifend quam a odio. In hac habitasse platea dictumst.",
+            "propId": 12,
+            "isUrgent": false
+          }, {
+            "id": 25,
+            "message": "Integer ac leo. Pellentesque ultrices mattis odio.",
+            "propId": 12,
+            "isUrgent": false
+          }, {
+            "id": 26,
+            "message": "Pellentesque ultrices mattis odio. Donec vitae nisi.",
+            "propId": 3,
+            "isUrgent": true
+          }, {
+            "id": 27,
+            "message": "Donec ut mauris eget massa tempor convallis.",
+            "propId": 4,
+            "isUrgent": true
+          }, {
+            "id": 28,
+            "message": "Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+            "propId": 7,
+            "isUrgent": true
+          }, {
+            "id": 29,
+            "message": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo.",
+            "propId": 11,
+            "isUrgent": true
+          }, {
+            "id": 30,
+            "message": "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
+            "propId": 3,
+            "isUrgent": false
+          }, {
+            "id": 31,
+            "message": "Quisque porta volutpat erat.",
+            "propId": 2,
+            "isUrgent": false
+          }, {
+            "id": 32,
+            "message": "Pellentesque viverra pede ac diam.",
+            "propId": 4,
+            "isUrgent": false
+          }, {
+            "id": 33,
+            "message": "Nulla tellus. In sagittis dui vel nisl.",
+            "propId": 9,
+            "isUrgent": true
+          }, {
+            "id": 34,
+            "message": "Vestibulum ac est lacinia nisi venenatis tristique.",
+            "propId": 1,
+            "isUrgent": true
+          }, {
+            "id": 35,
+            "message": "Duis aliquam convallis nunc.",
+            "propId": 6,
+            "isUrgent": false
+          }, {
+            "id": 36,
+            "message": "In quis justo. Maecenas rhoncus aliquam lacus.",
+            "propId": 11,
+            "isUrgent": true
+          }, {
+            "id": 37,
+            "message": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
+            "propId": 4,
+            "isUrgent": false
+          }, {
+            "id": 38,
+            "message": "Vestibulum sed magna at nunc commodo placerat.",
+            "propId": 7,
+            "isUrgent": false
+          }, {
+            "id": 39,
+            "message": "Suspendisse potenti.",
+            "propId": 5,
+            "isUrgent": false
+          }, {
+            "id": 40,
+            "message": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
+            "propId": 8,
+            "isUrgent": false
+          }, {
+            "id": 41,
+            "message": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+            "propId": 9,
+            "isUrgent": true
+          }, {
+            "id": 42,
+            "message": "Sed ante. Vivamus tortor.",
+            "propId": 2,
+            "isUrgent": true
+          }, {
+            "id": 43,
+            "message": "Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+            "propId": 9,
+            "isUrgent": true
+          }, {
+            "id": 44,
+            "message": "Pellentesque at nulla. Suspendisse potenti.",
+            "propId": 12,
+            "isUrgent": false
+          }, {
+            "id": 45,
+            "message": "Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.",
+            "propId": 10,
+            "isUrgent": false
+          }, {
+            "id": 46,
+            "message": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.",
+            "propId": 12,
+            "isUrgent": true
+          }, {
+            "id": 47,
+            "message": "Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.",
+            "propId": 1,
+            "isUrgent": true
+          }, {
+            "id": 48,
+            "message": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
+            "propId": 2,
+            "isUrgent": true
+          }, {
+            "id": 49,
+            "message": "Aliquam erat volutpat. In congue.",
+            "propId": 11,
+            "isUrgent": false
+          }, {
+            "id": 50,
+            "message": "Suspendisse potenti.",
+            "propId": 9,
+            "isUrgent": false
+          }
+    ]
+}
