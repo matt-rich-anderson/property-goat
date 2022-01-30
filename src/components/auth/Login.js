@@ -36,7 +36,7 @@ export const Login = () => {
 
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Property Goat</h1>
+                    <img src="https://i.imgur.com/iEcSktY.png" alt="Property Goat" width="500"></img>
                     <h2>Sign In</h2>
                     <p><i>Grab Your Property by the Horns.</i></p>
                     <fieldset className="form--lab-field">

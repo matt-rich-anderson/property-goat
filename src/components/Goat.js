@@ -5,7 +5,6 @@ import { NavBar } from "./nav/NavBar";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import "./Goat.css";
-import { Dashboard } from "./dashboard/Dashboard";
 
 export const Goat = () => (
     <>
@@ -15,7 +14,6 @@ export const Goat = () => (
             return (
               <>
                 <NavBar />
-                <Dashboard />
                 <ApplicationViews />
               </>
             );

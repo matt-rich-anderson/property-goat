@@ -11,11 +11,11 @@ export const NavBar = () => {
                 <Link className="navbar__logout--link" to="#" onClick={() => localStorage.removeItem("goat_user")}>Logout</Link>
             </div>    
             <div className ="nav__brand">   
-                <h1>PROPERTY GOAT</h1>
+               <Link to={"/"}><img src="https://i.imgur.com/FMitkyC.png?1" alt="Property Goat" width="700"></img></Link>
             </div>
             <div className ="nav__adds">     
-                <p className ="nav__add--prop">Add Property</p>
-                <p className ="nav__add--note">Add Note</p>
+                <Link to="/addproperty"><button className ="nav__add--prop">Add Property</button></Link>
+                <Link to="/addnote"><button className ="nav__add--note">Add Note</button></Link>
             </div>
         </div>
 
