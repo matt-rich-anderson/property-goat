@@ -54,7 +54,8 @@ export const Register = (props) => {
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Honey Rae Repairs</h1>
+                <img src="https://i.imgur.com/iEcSktY.png" alt="Property Goat" width="500"></img>
+                <h3>Please Complete Form to Create and Account</h3>
                 <fieldset>
                     <label htmlFor="name"> Full Name </label>
                     <input onChange={updateCustomer}

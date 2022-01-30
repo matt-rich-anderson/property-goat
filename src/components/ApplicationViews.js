@@ -1,27 +1,21 @@
-
 import React from "react"
-import { Link } from "react-router-dom"
-import "./NavBar.css"
+import { Route } from "react-router-dom"
+import { PropertyForm } from "./properties/PropertyForm"
+import { NoteForm } from "./notes/NoteForm"
+import { Dashboard } from "./dashboard/Dashboard"
 
-export const NavBar = (props) => {
+export const ApplicationViews = () => {
     return (
-        <ul className="navbar">
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/customers">Customers</Link>
-            </li>
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/employees">Employees</Link>
-            </li>
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/tickets">Tickets</Link>
-            </li>
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/tickets/create">Ticket Form</Link>
-            </li>
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="#"
-                onClick={() => localStorage.removeItem("honey_customer")}>Logout</Link>
-            </li>
-        </ul>
+        <>
+            <Route exact path="/">
+                <Dashboard />
+            </Route>
+            <Route path="/addproperty">
+                <PropertyForm />
+            </Route>            
+            <Route path="/addnote">
+                <NoteForm />
+            </Route>
+        </>
     )
 }

@@ -5,7 +5,7 @@ export const Dashboard = () => {
 
     return (
         <>
-        <h1>PROPERTY GOAT</h1>
+        <h1>Dashboard</h1>
         </>
     )
 
