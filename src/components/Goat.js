@@ -14,7 +14,9 @@ export const Goat = () => (
           if (localStorage.getItem("goat_user")) {
             return (
               <>
-              <Dashboard />
+                <NavBar />
+                <Dashboard />
+                <ApplicationViews />
               </>
             );
           } else {
