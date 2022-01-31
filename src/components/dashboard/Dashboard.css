@@ -1,0 +1,11 @@
+.dash{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.prop__dash {
+    border-style: solid;
+    border-color: grey;
+    border-radius: 15px;
+}

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const PropertyForm = () => {
-    return (<>
+
+   return (<>
     
     <h2>Create a New Property</h2>
 
