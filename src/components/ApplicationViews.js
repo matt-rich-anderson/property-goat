@@ -10,6 +10,9 @@ export const ApplicationViews = () => {
             <Route exact path="/">
                 <Dashboard />
             </Route>
+            <Route exact path="/property/:propertyId(\d+)">
+                <Property />
+            </Route>
             <Route path="/addproperty">
                 <PropertyForm />
             </Route>            
