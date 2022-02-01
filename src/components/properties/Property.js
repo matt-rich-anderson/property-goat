@@ -11,8 +11,7 @@ export const Property = () => {
 
     useEffect(()=>{
         getProperty(propertyId).then((data)=>setProperty(data))
-    }
-        ,[propertyId]
+    },[propertyId]
     )
 
     return(<>
@@ -24,6 +23,13 @@ export const Property = () => {
             <p>Bath: {property.bath}</p>
             <p>Pets Allowed: {property.petsAllowed ? "Yes" : "No"}</p>
             <h4>Owned By {property.ownerName}</h4>
+        </section>
+        <section>
+            <ul>
+                {property.notes?.map((note) => 
+                    <li key={note.id}>{note.message}</li>
+                    )}
+            </ul>
         </section>
         <section>
             <button type="button" onClick={()=>

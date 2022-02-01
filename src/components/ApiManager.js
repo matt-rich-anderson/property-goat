@@ -3,7 +3,7 @@ export const getUserProperty = () =>
         .then(res => res.json())
 
 export const getProperty = (id) =>
-    fetch(`http://localhost:8088/props/${id}`)
+    fetch(`http://localhost:8088/props/${id}/?_embed=notes`)
         .then(res => res.json())
 
 export const sendProperty = (propertyToSend) => {
