@@ -13,3 +13,8 @@ export const sendProperty = (propertyToSend) => {
         body: JSON.stringify(propertyToSend)}
     return fetch(`http://localhost:8088/props`, postOptions)
     }
+
+export const deleteProperty = (id) => {
+    return fetch(`http://localhost:8088/props/${id}`,
+        {method: "DELETE"})
+}
