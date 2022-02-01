@@ -3,44 +3,24 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { sendProperty } from "../ApiManager";
 
 export const PropertyForm = () => {
-   const [createdProperty, setCreatedProperty] = useState(
-        {
-           userId: parseInt(localStorage.getItem("goat_user"))
-        }
-    )
+   const [createdProperty, setCreatedProperty] = useState({userId: parseInt(localStorage.getItem("goat_user"))})
     
     const history = useHistory()
 
     const sendCreatedProperty = (evt) => {
-
         evt.preventDefault()
-            
-        const objectToSend = 
-            {
-                address: createdProperty.address,
-                bedroom: createdProperty.bedroom,
-                bath: createdProperty.bath,
-                sqrFoot: createdProperty.sqrFoot,
-                petsAllowed: createdProperty.petsAllowed,
-                ownerName: createdProperty.ownerName,
-                userId: createdProperty.userId,
-                imgUrl: createdProperty.imgUrl
-            }
-    
-        sendProperty(objectToSend).then(() => {
+        sendProperty(createdProperty).then(() => {
             history.push("/")
         })
     
     }
-
-    console.log(JSON.parse("true"))
     
     return (
     <>
     <h2>Create a New Property</h2>
         <form className="form--login">
             <fieldset>
-                <label htmlFor="address">Address </label>
+                <label htmlFor="address">Address</label>
                 <input onChange={(evt)=>{
                     const copy = {...createdProperty}
                     copy.address = evt.target.value
@@ -60,7 +40,7 @@ export const PropertyForm = () => {
                 type="number" id="footage" className="form-control" placeholder="3000"/>
             </fieldset>
             <fieldset>
-                <label htmlFor="bedroom">Number of Bedrooms </label>
+                <label htmlFor="bedroom">Number of Bedrooms</label>
                 <input onChange={(evt)=>{
                     const copy = {...createdProperty}
                     copy.bedroom = parseInt(evt.target.value)
@@ -114,7 +94,7 @@ export const PropertyForm = () => {
                 type="text" id="img" className="form-control" placeholder="https://YourImage.com/"/>
             </fieldset>        
             <fieldset>
-                <button onClick={sendCreatedProperty} type="submit"> Create Property </button>
+                <button onClick={sendCreatedProperty} type="submit">Create Property</button>
             </fieldset>
         </form>
         </>

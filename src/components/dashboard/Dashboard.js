@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { getUserProperty } from "../ApiManager";
 import "./Dashboard.css"
 
 export const Dashboard = () => {
 
     const [userProperties, setUserProperties] = useState({})
 
-    useEffect(() => fetch(`http://localhost:8088/users/${localStorage.getItem("goat_user")}?_embed=props`).then(res => res.json())
-                .then((data) => setUserProperties(data)),
-        []
+    useEffect(() => 
+        getUserProperty().then((data) => setUserProperties(data))
+        ,[]
     )
 
     return (
