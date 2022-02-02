@@ -6,6 +6,27 @@
 
 .prop__dash {
     border-style: solid;
+    border-width: 2px;
     border-color: grey;
     border-radius: 15px;
+    background-color: rgb(236, 236, 236);
+    margin: 10px;
+}
+
+.prop__img--details{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin: 5px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+}
+
+.prop__owner--details{
+    font-size: 10px;
+    margin: 10px;
+}
+
+.prop__address--details{
+    margin: 10px;
 }

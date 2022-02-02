@@ -28,7 +28,7 @@ export const Property = () => {
         <section>
                 <ul>
                     {property.notes?.map((note) => 
-                        <li key={note.id} className={note.isUrgent ? "priority" : ""}>{note.isUrgent ? "PRIORITY: " : ""}{note.message}
+                        <li key={note.id} className={note.isUrgent ? "priority" : ""}>🐐 {note.isUrgent ? "PRIORITY: " : ""}{note.message}
                         <button onClick={()=>
                             window.confirm(`Are you sure you want to delete note "${note.message}"?`) === true 
                             ?
