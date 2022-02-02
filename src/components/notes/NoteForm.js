@@ -18,7 +18,7 @@ export const NoteForm = () => {
     const sendCreatedNote = (evt) => {
         evt.preventDefault()
         sendNote(noteObject).then(() => {
-            history.push("/")
+            history.push(`/property/${noteObject.propId}`)
         })
     }
 
@@ -57,7 +57,7 @@ export const NoteForm = () => {
             </fieldset>
 
             <fieldset>
-                <button onClick={sendCreatedNote} type="submit">Create Property</button>
+                <button onClick={sendCreatedNote} type="submit">Create Note</button>
             </fieldset>
 
         </>
