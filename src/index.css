@@ -13,6 +13,15 @@ h1, h2, h3, h4, h5 {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
 
-
+button {
+  background-color: #B22025;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px
 }

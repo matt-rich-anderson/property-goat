@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
-import { deleteProperty, getProperty } from "../ApiManager"
+import { deleteNote, deleteProperty, getProperty } from "../ApiManager"
 import "./Property.css"
 
 export const Property = () => {
@@ -26,11 +26,20 @@ export const Property = () => {
             <h4>Owned By {property.ownerName}</h4>
         </section>
         <section>
-            <ul>
-                {property.notes?.map((note) => 
-                    <li key={note.id} className={note.isUrgent ? "priority" : ""}>{note.isUrgent ? "PRIORITY: " : ""}{note.message}</li>
-                    )}
-            </ul>
+                <ul>
+                    {property.notes?.map((note) => 
+                        <li key={note.id} className={note.isUrgent ? "priority" : ""}>{note.isUrgent ? "PRIORITY: " : ""}{note.message}
+                        <button onClick={()=>
+                            window.confirm(`Are you sure you want to delete note "${note.message}"?`) === true 
+                            ?
+                            deleteNote(note.id)
+                                .then(() => getProperty(propertyId))
+                                .then((data)=>setProperty(data))
+                            :
+                            null
+                        }>Delete</button></li>
+                        )}
+                </ul>
         </section>
         <section>
             <button type="button" onClick={()=>
