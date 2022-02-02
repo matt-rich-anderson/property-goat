@@ -1,9 +1,9 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { PropertyForm } from "./properties/PropertyForm"
-import { NoteForm } from "./notes/NoteForm"
 import { Dashboard } from "./dashboard/Dashboard"
 import { Property } from "./properties/Property"
+import { TestAgain } from "./TestAgain"
 
 export const ApplicationViews = () => {
     return (
@@ -18,8 +18,8 @@ export const ApplicationViews = () => {
                 <PropertyForm />
             </Route>            
             <Route path="/addnote">
-                <NoteForm />
+                <TestAgain />
             </Route>
-        </>
+        </> 
     )
 }

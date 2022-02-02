@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 import { deleteProperty, getProperty } from "../ApiManager"
+import "./Property.css"
 
 export const Property = () => {
     const { propertyId } = useParams()
@@ -27,7 +28,7 @@ export const Property = () => {
         <section>
             <ul>
                 {property.notes?.map((note) => 
-                    <li key={note.id}>{note.message}</li>
+                    <li key={note.id} className={note.isUrgent ? "priority" : ""}>{note.isUrgent ? "PRIORITY: " : ""}{note.message}</li>
                     )}
             </ul>
         </section>
