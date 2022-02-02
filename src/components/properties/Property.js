@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 import { deleteProperty, getProperty } from "../ApiManager"
+import "./Property.css"
 
 export const Property = () => {
     const { propertyId } = useParams()
@@ -11,8 +12,7 @@ export const Property = () => {
 
     useEffect(()=>{
         getProperty(propertyId).then((data)=>setProperty(data))
-    }
-        ,[propertyId]
+    },[propertyId]
     )
 
     return(<>
@@ -24,6 +24,13 @@ export const Property = () => {
             <p>Bath: {property.bath}</p>
             <p>Pets Allowed: {property.petsAllowed ? "Yes" : "No"}</p>
             <h4>Owned By {property.ownerName}</h4>
+        </section>
+        <section>
+            <ul>
+                {property.notes?.map((note) => 
+                    <li key={note.id} className={note.isUrgent ? "priority" : ""}>{note.isUrgent ? "PRIORITY: " : ""}{note.message}</li>
+                    )}
+            </ul>
         </section>
         <section>
             <button type="button" onClick={()=>
