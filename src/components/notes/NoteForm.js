@@ -6,7 +6,8 @@ import "./NoteForm.css"
 export const NoteForm = () => {
 
     const [userProperties, setUserProperties] = useState({})
-    const [noteObject, setNoteObject] = useState({})
+    const [messageObject, setMessageObject] = useState({})
+    const [selectedProps, setselectedProps] = useState([])
 
     const history = useHistory()
 
@@ -17,49 +18,70 @@ export const NoteForm = () => {
 
     const sendCreatedNote = (evt) => {
         evt.preventDefault()
-        sendNote(noteObject).then(() => {
-            history.push(`/property/${noteObject.propId}`)
-        })
+
+        selectedProps.map( (idNum) => {
+            const completeObj = messageObject
+            completeObj.propId = idNum
+            sendNote(completeObj).then(() => {
+                if (selectedProps.length === 1){
+                    history.push(`/property/${completeObj.propId}`)
+                }
+                else {
+                    history.push(`/`)
+                }
+            }
+            )
+        }
+        )
+    }
+
+    const propertyChooser = (evt) => {
+        let arraycopy = [...selectedProps]
+        if(selectedProps.includes(parseInt(evt.target.value))) {
+            arraycopy = arraycopy.filter((id) => id !== parseInt(evt.target.value))
+            setselectedProps(arraycopy)
+        }
+        else {
+            arraycopy.push(parseInt(evt.target.value))
+            setselectedProps(arraycopy)
+        }
     }
 
     return(
         <>
-            <h2>Select a Property for your Note</h2>
+            <div className="note__form">
+                <h2>Select a Property for your Note</h2>
 
-            <fieldset>
-                <select onChange={(evt)=>{
-                    const copy = {...noteObject}
-                    copy.propId = parseInt(evt.target.value)
-                    setNoteObject(copy)
-                    }
-                }
-                className="form-control">
-                    <option>Select Property</option>
-                    {userProperties.props?.map((p)=><option key={p.id} value={p.id}>{p.address}</option>)}
-                </select>
-            </fieldset>
+                <fieldset>
+                    {userProperties.props?.map((p) =>
+                        <div key={p.id}> 
+                            <input type="checkbox" value={p.id} onChange={propertyChooser}/>
+                            <label>{p.address}</label>
+                        </div>
+                        )}
+                </fieldset>
 
-            <fieldset className="form--lab-field">
-                <label>Message:</label>
-                <input type="text" className="form-control" placeholder="Replace Counter Tops ASAP" onChange={(evt)=>{
-                    const copy = {...noteObject}
-                    copy.message = evt.target.value
-                    setNoteObject(copy)
-                    }
-                }/>
-                <input type="checkbox" onChange={(evt) => {
-                    const copy = {...noteObject}
-                    copy.isUrgent = evt.target.checked
-                    setNoteObject(copy)
-                    }
-                }/>
-                <label>Is this message Priority?</label>
-            </fieldset>
+                <fieldset className="form--lab-field">
+                    <label>Message:</label>
+                    <input type="text" className="form-control" placeholder="Replace Countertops ASAP" onChange={(evt)=>{
+                        const copy = {...messageObject}
+                        copy.message = evt.target.value
+                        setMessageObject(copy)
+                        }
+                    }/>
+                    <input type="checkbox" onChange={(evt) => {
+                        const copy = {...messageObject}
+                        copy.isUrgent = evt.target.checked
+                        setMessageObject(copy)
+                        }
+                    }/>
+                    <label>Is this message Priority?</label>
+                </fieldset>
 
-            <fieldset>
-                <button onClick={sendCreatedNote} type="submit">Create Note</button>
-            </fieldset>
-
+                <fieldset>
+                    <button onClick={sendCreatedNote} type="submit">Create Note</button>
+                </fieldset>
+            </div>        
         </>
     )
 
