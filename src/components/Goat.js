@@ -3,8 +3,8 @@ import { Route, Redirect } from "react-router-dom";
 import { ApplicationViews } from "./ApplicationViews";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
-import "./Goat.css";
 import { NavBar } from "./nav/NavBar";
+import "./Goat.css";
 
 export const Goat = () => (
     <>
