@@ -5,8 +5,6 @@
 fieldset {
     text-align: left;
     min-width: 0;
-    padding: 1rem 0;
-    margin: 0;
     border: 0;
 }
 
@@ -16,7 +14,6 @@ fieldset {
 }
 
 .form--login > fieldset > input[type="email"] {
-    width: 25em;
 }
 
 .label--login {
