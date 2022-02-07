@@ -6,14 +6,28 @@ import "./Dashboard.css"
 export const Dashboard = () => {
 
     const [userProperties, setUserProperties] = useState({})
+    const [landingMessage, setLandingMessage] = useState("")
 
     useEffect(() => 
-        getUserProperty().then((data) => setUserProperties(data))
+        getUserProperty()
+        .then((data) => setUserProperties(data))
         ,[]
     )
 
+    useEffect(() =>  {
+        if(userProperties.props < 1){setLandingMessage(`Please Click "Add Properties" to Create Your First Property Card`)}
+        else{setLandingMessage(`Click on a Property Card to See Details`)}
+
+    }
+    ,[userProperties]
+)
+
+
     return (
         <>
+            <div>
+                <h2>{landingMessage}</h2>
+            </div>
             <div className="dash">
                 {userProperties.props?.map((property) =>
                     <article className="prop__dash" key={property.id}>
