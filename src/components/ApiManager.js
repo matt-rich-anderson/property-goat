@@ -2,8 +2,8 @@ export const getUserProperty = () =>
     fetch(`http://localhost:8088/users/${localStorage.getItem("goat_user")}?_embed=props`)
         .then(res => res.json())
 
-export const getProperty = (id) =>
-    fetch(`http://localhost:8088/props/${id}/?_embed=notes`)
+export const getPropNotesLease = (id) =>
+    fetch(`http://localhost:8088/props/${id}/?_embed=notes&_embed=leases`)
         .then(res => res.json())
 
 export const sendProperty = (propertyToSend) => {

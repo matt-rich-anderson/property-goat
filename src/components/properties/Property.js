@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
-import { deleteNote, deleteProperty, getProperty } from "../ApiManager"
+import { deleteNote, deleteProperty, getPropNotesLease } from "../ApiManager"
 import "./Property.css"
 
 export const Property = () => {
@@ -11,14 +11,17 @@ export const Property = () => {
     const history = useHistory()
 
     useEffect(()=>{
-        getProperty(propertyId).then((data)=>setProperty(data))
+        getPropNotesLease(propertyId).then((data)=>setProperty(data))
     },[propertyId]
     )
+
+    const propertyLease = property.leases?.find((lease) => lease.renterName !== null )
 
     return(<>
         <section key={property.id}>
             <img src={property.imgUrl} alt="Property Image" width="600" />
             <h2>{property.address}</h2>
+            <h3>{property.leases?.length < 1 ? "This Property is Available for Lease" : `Leased to ${propertyLease?.renterName} for $${propertyLease?.rent} mo.`}</h3>
             <p>Square Feet: {property.sqrFoot}</p>
             <p>Bedroom: {property.bedroom}</p>
             <p>Bath: {property.bath}</p>
@@ -33,7 +36,7 @@ export const Property = () => {
                             window.confirm(`Are you sure you want to delete note "${note.message}"?`) === true 
                             ?
                             deleteNote(note.id)
-                                .then(() => getProperty(propertyId))
+                                .then(() => getPropNotesLease(propertyId))
                                 .then((data)=>setProperty(data))
                             :
                             null
