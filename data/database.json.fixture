@@ -390,42 +390,42 @@
   "leases":[
       {
         "id": 1,
-        "propertyId": 2,
+        "propId": 2,
         "renterName": "Bordy Long",
         "rent": 3747
       }, {
         "id": 2,
-        "propertyId": 3,
+        "propId": 3,
         "renterName": "Harman Lardier",
         "rent": 2330
       }, {
         "id": 3,
-        "propertyId": 4,
+        "propId": 4,
         "renterName": "Cece Huntington",
         "rent": 3749
       }, {
         "id": 4,
-        "propertyId": 6,
+        "propId": 6,
         "renterName": "Silvain Goldup",
         "rent": 3995
       }, {
         "id": 5,
-        "propertyId": 8,
+        "propId": 8,
         "renterName": "Hallsy Kira",
         "rent": 3678
       }, {
         "id": 6,
-        "propertyId": 9,
+        "propId": 9,
         "renterName": "Bourke Mytton",
         "rent": 3794
       }, {
         "id": 7,
-        "propertyId": 11,
+        "propId": 11,
         "renterName": "Rossie Wildbore",
         "rent": 2377
       }, {
         "id": 8,
-        "propertyId": 12,
+        "propId": 12,
         "renterName": "Carma Kubecka",
         "rent": 3990
       }
