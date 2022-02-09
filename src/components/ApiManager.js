@@ -1,3 +1,7 @@
+export const getProperties = () =>
+    fetch(`http://localhost:8088/props?_embed=leases`)
+        .then(res => res.json())
+
 export const getUserProperty = () =>
     fetch(`http://localhost:8088/users/${localStorage.getItem("goat_user")}?_embed=props`)
         .then(res => res.json())
