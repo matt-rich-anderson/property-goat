@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 import { deleteNote, deleteProperty, getPropNotesLease } from "../ApiManager"
 import "./Property.css"
@@ -32,7 +32,8 @@ export const Property = () => {
                 <ul>
                     {property.notes?.map((note) => 
                         <li key={note.id} className={note.isUrgent ? "priority" : ""}>🐐 {note.isUrgent ? "PRIORITY: " : ""}{note.message}
-                        <button onClick={()=>
+                        <Link to={`/property/edit/${note.id}`} ><button className="note__button__edit">Edit Note</button></Link>
+                        <button className="note__button__delete" onClick={()=>
                             window.confirm(`Are you sure you want to delete note "${note.message}"?`) === true 
                             ?
                             deleteNote(note.id)
@@ -40,7 +41,8 @@ export const Property = () => {
                                 .then((data)=>setProperty(data))
                             :
                             null
-                        }>Delete</button></li>
+                        }>Delete Note</button>
+                        </li>
                         )}
                 </ul>
         </section>

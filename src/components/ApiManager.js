@@ -10,6 +10,10 @@ export const getPropNotesLease = (id) =>
     fetch(`http://localhost:8088/props/${id}/?_embed=notes&_embed=leases`)
         .then(res => res.json())
 
+export const getNote = (id) =>
+    fetch(`http://localhost:8088/notes/${id}`)
+        .then(res => res.json())
+
 export const sendProperty = (propertyToSend) => {
     const postOptions = {
         method: "POST",
