@@ -3,3 +3,15 @@
     border-color: #B22025;
     color: #B22025;
 }
+
+.note__button__edit, .note__button__delete{
+    margin: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10px;
+}
+
+.note__button__edit{
+    background-color: #4D8761;
+}
