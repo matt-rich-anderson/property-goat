@@ -23,7 +23,7 @@ export const NoteEdit = () => {
             method: "PUT",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(copy)
-        }).then(() => {history.push(`/property/${note.propertyId}`)})
+        }).then(() => {history.push(`/property/${note.propId}`)})
     }
 
     return(
@@ -33,7 +33,7 @@ export const NoteEdit = () => {
             <textarea defaultValue={note.message} onChange={(evt)=>setEditedMessage(evt.target.value)} rows="4" cols="50"/>
         </div>
         <div>
-            <button> Save Note</button>
+            <button onClick={changeMessage}> Save Note</button>
         </div>
         </>
     )
