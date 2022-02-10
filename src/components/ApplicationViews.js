@@ -5,6 +5,7 @@ import { Dashboard } from "./dashboard/Dashboard"
 import { Property } from "./properties/Property"
 import { NoteForm } from "./notes/NoteForm"
 import { NoteEdit } from "./notes/NoteEdit"
+import { LeaseForm } from "./leases/LeaseForm"
 
 export const ApplicationViews = () => {
     return (
@@ -20,6 +21,9 @@ export const ApplicationViews = () => {
             </Route>
             <Route path="/addproperty">
                 <PropertyForm />
+            </Route>
+            <Route path="/addlease">
+                <LeaseForm />
             </Route>            
             <Route path="/addnote">
                 <NoteForm />

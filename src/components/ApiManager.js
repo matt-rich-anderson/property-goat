@@ -30,6 +30,14 @@ export const sendNote = (noteToSend) => {
     return fetch(`http://localhost:8088/notes`, postOptions)
     }
 
+export const sendLease = (leaseToSend) => {
+    const postOptions = {
+        method: "POST",
+        headers: {"Content-Type": "application/json"}, 
+        body: JSON.stringify(leaseToSend)}
+    return fetch(`http://localhost:8088/leases`, postOptions)
+    }
+
 export const deleteProperty = (id) => {
     return fetch(`http://localhost:8088/props/${id}`,
         {method: "DELETE"})
