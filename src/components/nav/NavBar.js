@@ -27,6 +27,7 @@ export const NavBar = () => {
             <div className ="nav__adds">     
                 <Link to="/addproperty"><button className ="nav__add--prop">Add Property</button></Link>
                 <Link to="/addnote"><button className ="nav__add--note">Add Note</button></Link>
+                <Link to="/addlease"><button className ="nav__add--lease">Add Lease</button></Link>
             </div>
         </div>
     )
