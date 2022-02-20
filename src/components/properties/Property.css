@@ -15,3 +15,27 @@
 .note__button__edit{
     background-color: #4D8761;
 }
+.property__section{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    text-align: center;
+}
+
+.property__pic{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.property__stats{
+    display: flex;
+    justify-content: center;
+
+}
+
+.property__stats__det{
+    margin: 10px
+}

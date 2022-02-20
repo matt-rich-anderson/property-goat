@@ -1,35 +1,48 @@
-.dash{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.dash {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .prop__dash {
-    border-style: solid;
-    border-width: 2px;
-    border-color: grey;
-    border-radius: 15px;
-    background-color: rgb(236, 236, 236);
-    margin: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #4D8761;
+  border-radius: 15px;
+  background-color: rgb(236, 236, 236);
+  margin: 10px;
 }
 
-.prop__img--details{
-    width: 250px;
-    height: 150px;
-    object-fit: cover;
+.prop__img--details {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  margin: 5px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+}
+
+.prop__owner--details {
+  font-size: 10px;
+  margin: 5px;
+  color: grey;
+}
+
+.prop__address--details {
+  margin: 5px;
+  text-align: left;
+}
+
+.prop__lease--det--Leased {
     margin: 5px;
-    margin-bottom: 0px;
-    border-radius: 10px;
+    color: grey;
 }
 
-.prop__owner--details{
-    font-size: 10px;
-    margin: 10px;
-}
-
-.prop__address--details{
-    margin: 10px;
+.prop__lease--det--Avail {
+    margin: 5px;
+    color: #B22025;
+    font-weight: bold
 }
