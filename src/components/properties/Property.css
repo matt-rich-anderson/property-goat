@@ -2,6 +2,11 @@
     border: solid;
     border-color: #B22025;
     color: #B22025;
+    margin: 5px
+}
+
+.nonpriority{
+    margin: 5px
 }
 
 .note__button__edit, .note__button__delete{

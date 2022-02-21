@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { getUserProperty, sendLease } from "../ApiManager";
+import "./LeaseForm.css";
 
 export const LeaseForm = () => {
 
@@ -23,6 +24,7 @@ export const LeaseForm = () => {
 
     return(
         <>
+        <div className="lease__form">
             <h2>Create a New Lease</h2>
             <fieldset className="form--lab-field">
                 <select className="form-control"onChange={(evt)=>{
@@ -50,6 +52,7 @@ export const LeaseForm = () => {
                     }/>
                 <button onClick={sendNewLease} type="submit">Create Lease</button>
             </fieldset>
+        </div>
         </>
     )
 }

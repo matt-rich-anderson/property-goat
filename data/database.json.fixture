@@ -9,6 +9,11 @@
         "id": 2,
         "name":"Nick Murphy",
         "email":"nick@go-mail.com"
+      },
+      {
+        "id": 3,
+        "name":"Tom Ligotti",
+        "email":"tom@go-mail.com"
       }
   ],
   "props":[
@@ -44,7 +49,7 @@
         "imgUrl": "https://i.imgur.com/IoGs1Pg.png"
       }, {
         "id": 4,
-        "address": "60 Gerald Way",
+        "address": "60 Fox Lane",
         "bedroom": 4,
         "bath": 4,
         "sqrFoot": 2278,
