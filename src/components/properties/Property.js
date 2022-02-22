@@ -75,7 +75,7 @@ export const Property = () => {
           type="button"
           onClick={() =>
             window.confirm(
-              `Are you sure you want to delete ${property.address}, owned by${property.ownerName}?`
+              `Are you sure you want to delete ${property.address}, owned by ${property.ownerName}?`
             ) === true
               ? deleteProperty(property.id).then(() => history.push("/"))
               : null
