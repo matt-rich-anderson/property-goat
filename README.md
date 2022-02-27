@@ -8,6 +8,6 @@ Property Goat is a web-based app designed to help small-scale residential proper
 ## **The Dashboard**
 Upon successful login, a user will be taken to their Dashboard. Here they will see all of the properties they have previously created or they will see a prompt to create their first property if they are a new user. 
 
-***If at any time the user wishes to return to their dashboard, they can click the 'Property Goat' log in the navigation bar.
+**If at any time the user wishes to return to their dashboard, they can click the 'Property Goat' log in the navigation bar.
 
 ## **Property Details**
